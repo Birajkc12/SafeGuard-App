@@ -3,10 +3,12 @@ import 'package:safeguard_app/onboarding_Page.dart';
 import 'package:safeguard_app/view/main_tabview/main_tabview.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const OnBoardingView(),
-        '/main': (context) => MainTabView(),
+        '/main': (context) => const MainTabView(),
       },
     );
   }
