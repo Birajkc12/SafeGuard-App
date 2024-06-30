@@ -1,10 +1,13 @@
+// main_tab_view.dart
 import 'package:flutter/material.dart';
-import 'package:safeguard_app/home_page.dart';
 import 'package:safeguard_app/view/ExplorePage/explore_page.dart';
+import 'package:safeguard_app/view/HomePage/home_page.dart';
 import 'package:safeguard_app/view/MyCirclePage/my_circle_page.dart';
 import 'package:safeguard_app/view/ProfilePage/profile_page.dart';
 
 class MainTabView extends StatefulWidget {
+  const MainTabView({super.key});
+
   @override
   _MainTabViewState createState() => _MainTabViewState();
 }
@@ -28,10 +31,13 @@ class _MainTabViewState extends State<MainTabView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF5F5FA),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
+        selectedItemColor: const Color(0xFF313A51), // Active color
+        unselectedItemColor: Colors.grey, // Inactive color
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

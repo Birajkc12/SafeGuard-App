@@ -38,7 +38,7 @@ class _PasswordFieldState extends State<PasswordField> {
     return Container(
       decoration: BoxDecoration(
         color: widget.bgColor ?? TColor.textfield,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(7),
       ),
       child: Row(
         children: [
